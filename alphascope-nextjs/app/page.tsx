@@ -39,15 +39,29 @@ export default function HomePage() {
       <div className="orb orb-a" />
       <div className="orb orb-b" />
 
-      <header className="topbar">
-        <div className="brand">AlphaScope AI</div>
-        <nav className="nav">
-          <a href="#markets">Markets</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#referral">Referral</a>
-          <a href="#start" className="nav-cta">Start Free</a>
-        </nav>
-      </header>
+     <header className="topbar">
+  <div className="brand">AlphaScope AI</div>
+  <nav className="nav">
+    <a href="#markets">Markets</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#referral">Referral</a>
+    <a href="#start" className="nav-cta">Start Free</a>
+  </nav>
+  <select
+    onChange={(e) => {
+      window.location.href = /${e.target.value === 'en' ? '' : e.target.value};
+    }}
+    defaultValue="en"
+    style={{background:'transparent', color:'white', border:'1px solid rgba(255,255,255,0.3)', borderRadius:'6px', padding:'4px 8px', cursor:'pointer'}}
+  >
+    <option value="en">🇬🇧 EN</option>
+    <option value="ru">🇷🇺 RU</option>
+    <option value="zh">🇨🇳 ZH</option>
+    <option value="es">🇪🇸 ES</option>
+    <option value="ar">🇸🇦 AR</option>
+    <option value="fr">🇫🇷 FR</option>
+  </select>
+</header>
 
       <section className="hero">
         <div className="eyebrow">AI market intelligence • global membership • live alerts</div>
